@@ -1,0 +1,35 @@
+.news-data{
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 2rem;
+}
+.crypto-news{
+    background: var(--card-color);
+    display: flex;
+    border-radius: 17px;
+    padding: 1rem 2rem;
+    transition: all .3s ease;
+    cursor: pointer;
+    align-items: center;
+    gap: 1rem;
+    max-height: 10rem;
+    overflow: hidden;
+    max-width: 30rem;
+}
+.crypto-news:hover{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    /* max-width: 30rem; */
+}
+.news-image img{
+    width: 6rem;
+}
+.news-title a {
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+}
+.news-title{
+    font-size: 14px;
+}

@@ -1,0 +1,23 @@
+.navbar{
+display: flex;
+justify-content: space-between;
+padding: 2rem 0rem;
+}
+.nav-links{
+    display: flex;
+    gap: 1rem;
+}
+.links {
+    padding: 1rem 3rem;
+    font-size: 13px;
+    color: #fff;
+    border-radius: 2rem;
+    outline: none;
+    background: var( --card-color);
+    border: none;
+    transition: all .3s ease;
+}
+.links:hover{
+    background-color: var(--blue-color);
+}
+

@@ -1,0 +1,85 @@
+
+/* .all-card:hover{
+    background: #2170ff;
+    color: #fff;
+    box-shadow: 0px 0px 18px 1px rgba(255, 255, 255, 0.47);
+} */
+.cryptos {
+    height: 88vh;
+}
+.heading{
+    width: 100%;
+    text-align: center; 
+}
+.coin-input {
+    outline: none;
+    padding: 10px 20px;
+    border-radius: 2rem;
+    border: none;
+}
+.coin-search {
+    display: flex;
+    margin: 2rem;
+    gap: 2rem;
+}
+.all-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    height: 60vh;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    /* margin: 4rem; */
+}
+.all-cards::-webkit-scrollbar{
+    border-radius: 2rem;
+    width: 12px;
+    background-color: #fff;
+}
+.all-cards::-webkit-scrollbar-thumb{
+	border-radius: 10px;
+    background: var(--blue-color);
+
+}
+.all-card{
+    background: var(--card-color);
+    display: flex;
+    /* flex-direction: column; */
+    gap: 2rem;
+    border-radius: 17px;
+    padding: 1rem;
+    transition: all .3s ease;
+    cursor: pointer;
+}
+.all-cn-rank{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+.all-cn-info{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.all-cn-name-price {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 0;
+}
+.all-coin-data{
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+.all-cn-data{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    color: var(--gray-color);
+
+}
+.image img{
+    width: 3rem;
+}
