@@ -24,7 +24,7 @@
     max-width: 1700px;
 }
 .App{
-    min-width: 1200px;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
 }

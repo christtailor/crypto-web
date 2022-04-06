@@ -6,6 +6,8 @@ import  Navbar from './components/navbar/Navbar'
 import News from './components/news/News'
 import AllCoins from './components/AllCoins/AllCoins';
 import CoinPage from './components/CoinPage/CoinPage';
+import Footer from './components/footer/Footer'
+
 function App() {
   return (
     <Router>
@@ -19,8 +21,11 @@ function App() {
       <Route path='/allcoins' element={<AllCoins />}></Route>
       <Route path='/coin' element={<CoinPage />}></Route>
       <Route path='/coin/:CoinId' element={<CoinPage />}></Route>
+      <Route path='/calculator' element={<Calculator />}></Route>
       </Routes>
-    <News />
+
+    <Footer />
+    {/* <News /> */}
 
       </div>
       

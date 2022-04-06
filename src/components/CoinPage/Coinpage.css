@@ -1,4 +1,18 @@
 .coin-page-data{
     display: flex;
     gap: 2rem;
+    align-items: center;
+}
+.page-infomation a{
+text-decoration: underline;
+color: white;
+}
+.coin-page-infomation {
+    margin-top: 3rem;
+}
+.red_percent{
+    color: red;
+}
+.green_percent{
+    color: green;
 }

@@ -1,0 +1,15 @@
+footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem;
+    font-size: 13px;
+}
+footer span{
+    width: fit-content;
+}
+footer span a{
+    text-decoration: none;
+    color: #fff;
+}

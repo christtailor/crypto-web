@@ -4,6 +4,7 @@ import '../../App.css'
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 import Coin from './Coin'
+import News from '../news/News'
 
 const Crypto = () => {
 
@@ -117,6 +118,8 @@ const filteredCoins = coins.filter(coin =>
 
        </div>
         </div>
+
+            {/* <News /> */}
 
     </>
   )
