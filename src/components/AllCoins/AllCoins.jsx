@@ -98,6 +98,7 @@ const AllCoins = () => {
                        rank={coins.market_cap_rank}
                        percent24={coins.price_change_percentage_24h.toFixed(2)}
                        />
+                       
                      )
                    })}
                  
