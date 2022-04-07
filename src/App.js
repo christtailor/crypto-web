@@ -7,6 +7,7 @@ import News from './components/news/News'
 import AllCoins from './components/AllCoins/AllCoins';
 import CoinPage from './components/CoinPage/CoinPage';
 import Footer from './components/footer/Footer'
+import Calculator from './components/Calculator/Calculator'
 
 function App() {
   return (

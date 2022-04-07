@@ -20,12 +20,6 @@ const CoinPage = () => {
           // console.log(res.data)
         }).catch(error => console.log(error))
       }, [])
-      if ( cn_data < 0) {
-       console.log("green")
-      //  getColor("green_percent")
-      } else{
-
-      }
 
 
 
