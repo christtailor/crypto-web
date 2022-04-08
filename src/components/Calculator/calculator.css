@@ -1,0 +1,27 @@
+.calculator{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+.calculator input{
+    outline: none;
+    border: 0;
+    padding: 8px 50px;
+    text-align: center;
+}
+.calculator span{
+    margin-top: 1rem;
+    font-size: 2rem;
+}
+.select-currency {
+    display: flex;
+    gap: 1rem;
+}
+.select-currency select{
+    outline: none;
+    border: 0;
+    padding: 10px 25px;
+    margin-top: 1rem;
+}

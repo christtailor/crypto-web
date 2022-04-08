@@ -1,65 +1,67 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
 import axios from 'axios'
+import './calculator.css'
 
 const Calculator = () => {
 const [calccoin, getCryptodata ] = useState([])
 const [inputValue, getInputValue] = useState(0)
-const [cryptoValue, getCryptoValue] = useState(null)
+const [cryptoValue, getCryptoValue] = useState('btc')
 const [currencyValue, getCurrencyValue] = useState('usd')
+console.log(calccoin)
 
-console.log(inputValue,cryptoValue,currencyValue,calccoin)
+const inputvalueChanged = e => {
+  getInputValue(e.target.value)
+}
+const cryptovalueChanged = e => {
+  getCryptoValue(e.target.value)
+}
+const currencyvalueChanged = e => {
+  getCurrencyValue(e.target.value)
+}
+
+// console.log(inputValue,cryptoValue,currencyValue,calccoin)
+const options = {
+  method: 'GET',
+  url: 'https://evaluate-expression.p.rapidapi.com/',
+  params: {expression: `${inputValue} ${cryptoValue} in ${currencyValue}`},
+  headers: {
+    'X-RapidAPI-Host': 'evaluate-expression.p.rapidapi.com',
+    'X-RapidAPI-Key': '57487d5c22msh9fd476153173200p1731f0jsneba23707f82b'
+  }
+};
 
 
+  axios.request(options).then(function (response) {
+    getCryptodata(response.data)
+  }).catch(function (error) {
+    console.error(error);
+  });
 
 
-      const inputvalueChanged = e => {
-        getInputValue(e.target.value)
-      }
-      const cryptovalueChanged = e => {
-        getCryptoValue(e.target.value)
-      }
-      const currencyvalueChanged = e => {
-        //   var jdj = coin && coin.market_data && coin.market_data.current_price && coin.market_data.current_price
-        // const currency_price = jdj[`${currencyValue}`]
-        // console.log(currency_price)
-        getCurrencyValue(e.target.value)
-      }
-    //   const currency_price = coin && coin.market_data && coin.market_data.current_price && coin.market_data.current_price.currencyValue.toLocaleString() 
-    //   console.log(currency_price)
-    let current_price = calccoin && calccoin.market_data && calccoin.market_data.current_price && calccoin.market_data.current_price[`${currencyValue}`] * inputValue
-    console.log(current_price)
-    //   const Calculate = () =>{
-
-    //   }
-    useEffect(() => {
-        axios.get(`https://api.coingecko.com/api/v3/coins/${cryptoValue}`)
-        .then(res => {
-            getCryptodata(res.data)
-          console.log(res.data)
-        }).catch(error => console.log(error))
-      }, [])
   return (
     <>
         <div className="calculator">
+
         <input 
                type="text"
                onChange={inputvalueChanged}
             //    onChangeCapture={Calculate()}
           />
-
-          <select name="crypto_currency" id="" onChangeCapture={cryptovalueChanged}>
-              <option value="bitcoin" >Bitcoin</option>
-              <option value="ethereum">ETH</option>
+          <div className="select-currency">
+          <select name="crypto_currency" id=""  onChangeCapture={cryptovalueChanged}>
+              <option value="btc" >Bitcoin</option>
+              <option value="eth">ETH</option>
               <option value="tet">Tether</option>
           </select>
-          <select name="currency" id="" onChange={currencyvalueChanged}>
+          <select name="currency" id="" onChange={currencyvalueChanged} >
               <option value="usd" >USD</option>
               <option value="inr">INR</option>
               <option value="pkr">PKR</option>
           </select>
+          </div>
 
-          <span>{current_price}</span>
+          <span>{calccoin}</span>
         </div>
     </>
   )
