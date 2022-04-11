@@ -8,9 +8,11 @@ const AllCoins = () => {
     const [search, setSearch] = useState('')
 
     const Coins = ({image, names, price, volume, capital, high24, rank, low24, percent24}) => {
+      
         return (
-          <div>
-              <div className="all-card">
+          <div class='allCoins'>
+            <a href={"coin/"+names} target="__blank" className='redirect-card'>
+            <div className="all-card">
                 <div className="all-cn-rank">
                   <small>Rank</small>
                   <span>{rank}</span>
@@ -34,20 +36,21 @@ const AllCoins = () => {
                        <small>Market Capital</small>
                        <small>{capital.toLocaleString()}</small>
                      </div>
-                     <div className="24hr-high all-cn-data" >
+                     <div className="hr24-high all-cn-data" >
                        <small>24 Hour High</small>
                        <small>{high24.toLocaleString()}</small>
                      </div>
-                     <div className="24hr-low all-cn-data" >
+                     <div className="hr24-low all-cn-data" >
                        <small>24 Hour Low</small>
                        <small>{low24.toLocaleString()}</small>
                      </div>
-                     <div className="24hr-low all-cn-data" >
+                     <div className="hr24-low all-cn-data" >
                        <small>24 Percent Change</small>
                        <small>{percent24.toLocaleString()}</small>
                      </div>
                     </div>
                   </div>
+            </a>
           </div>
         )
       }

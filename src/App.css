@@ -22,6 +22,7 @@
 .crypto-app{
     margin: 0 2rem;
     max-width: 1700px;
+    width: 100%;
 }
 .App{
     min-height: 100vh;

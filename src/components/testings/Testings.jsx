@@ -22,8 +22,7 @@ const Testings = () => {
         const options = {
           method: 'GET',
           url: `https://api.coingecko.com/api/v3/coins/${cryptoValue}`,
-  
-        };
+  }
         useEffect(() => {
           async function Fetchdata() {
             axios.request(options)
@@ -37,6 +36,7 @@ const Testings = () => {
 
       let current_price = calccoin && calccoin.market_data && calccoin.market_data.current_price && calccoin.market_data.current_price[`${currencyValue}`] * inputValue
       console.log(current_price)
+      
 
     return (
       <>
@@ -49,7 +49,9 @@ const Testings = () => {
             <select name="crypto_currency" id="" onChange={CryptovalueChanged}>
                 <option value="bitcoin" >Bitcoin</option>
                 <option value="ethereum">ETH</option>
-                <option value="tet">Tether</option>
+                <option value="tether">Tether</option>
+                <option value="solana">Solana</option>
+                <option value="cardano">Cardano</option>
             </select>
             <select name="currency" id="" onChange={currencyvalueChanged}>
                 <option value="usd" >USD</option>

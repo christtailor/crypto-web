@@ -27,6 +27,7 @@
     height: 60vh;
     overflow-x: hidden;
     overflow-y: scroll;
+    /* justify-content: center; */
     /* margin: 4rem; */
 }
 .all-cards::-webkit-scrollbar{
@@ -39,6 +40,10 @@
     background: var(--blue-color);
 
 }
+.allCoins{
+    display: flex;
+    justify-content: center;
+}
 .all-card{
     background: var(--card-color);
     display: flex;
@@ -46,6 +51,7 @@
     gap: 2rem;
     border-radius: 17px;
     padding: 1rem;
+    justify-content: center;
     transition: all .3s ease;
     cursor: pointer;
 }
@@ -80,4 +86,37 @@
 }
 .image img{
     width: 3rem;
+}
+@media screen and (max-width:600px){
+    .coin-search {
+        display: flex;
+        flex-direction: column;
+        margin: 1rem;
+        gap: 1rem;
+        font-size: 12px;
+    }
+    .coin-input {
+        outline: none;
+        padding: 5px 20px;
+        border-radius: 2rem;
+        border: none;
+    }
+    .allCoins{
+            display: flex;
+            justify-content: center;   
+    }
+    .all-card {
+        border-radius: 17px;
+        font-size: 10px;
+        padding: 0.5rem;
+    }
+    .hr24-high{
+        display: none;
+    }
+    .hr24-low {
+        display: none;
+    }
+    .image img {
+        width: 2rem;
+    }
 }
