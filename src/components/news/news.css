@@ -1,6 +1,9 @@
 .news {
     margin: 2rem;
 }
+.news h1{
+    text-align: center;
+}
 .news-data{
     display: flex;
     gap: 2rem;
