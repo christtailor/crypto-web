@@ -1,3 +1,6 @@
+.coin-page{
+    margin-top: 10rem;
+}
 .coin-page-data{
     display: flex;
     gap: 2rem;

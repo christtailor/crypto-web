@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
 import axios from 'axios'
+import './testings.css'
 
 
 const Testings = () => {
@@ -37,29 +38,61 @@ const Testings = () => {
       let current_price = calccoin && calccoin.market_data && calccoin.market_data.current_price && calccoin.market_data.current_price[`${currencyValue}`] * inputValue
       console.log(current_price)
       
-
     return (
       <>
           <div className="calculator">
-          <input 
-                 type="text"
-                 onChange={inputvalueChanged}
-            />
-  
-            <select name="crypto_currency" id="" onChange={CryptovalueChanged}>
-                <option value="bitcoin" >Bitcoin</option>
-                <option value="ethereum">ETH</option>
-                <option value="tether">Tether</option>
-                <option value="solana">Solana</option>
-                <option value="cardano">Cardano</option>
-            </select>
-            <select name="currency" id="" onChange={currencyvalueChanged}>
-                <option value="usd" >USD</option>
-                <option value="inr">INR</option>
-                <option value="pkr">PKR</option>
-            </select>
-  
-            <span>{current_price}</span>
+
+{/* 
+          <table>
+          <thead>
+<tr>
+<th>Total Volume</th>  
+<th>Market Capital</th>
+  <th>24 Hour High</th>
+  <th>24 Hour Low</th>
+  <th>24 Percent Change</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+  <td>25,639,943,671</td>
+  <td>760,608,534,240</td>
+    <td>40,660</td>
+    <td>0.09</td>
+    <td>0.09</td>
+
+  </tr>
+</tbody>
+</table> */}
+<table>
+<thead>
+<tr>
+<th>IP</th>  
+<th>Server FQDN</th>
+  <th>Type</th>
+  <th>OS</th>
+  <th>Memory</th>
+  <th>CPU</th>
+  <th>Bind Type</th>
+  <th>Exim Type</th>
+  <th>Instance(AWS)</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+  <td>56.208.157.93</td>
+  <td>filler</td>
+    <td>AWS</td>
+    <td>Ubuntu</td>
+    <td>3840 MB</td>
+    <td>2.60 GHz</td>
+    <td>master</td>
+    <td>master</td>
+    <td>m3.medium</td>
+  </tr>
+</tbody>
+</table>
+
           </div>
       </>
     )

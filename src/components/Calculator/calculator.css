@@ -4,12 +4,14 @@
     justify-content: center;
     text-align: center;
     align-items: center;
+    margin-top: 10rem;
 }
 .calculator input{
     outline: none;
     border: 0;
     padding: 8px 50px;
     text-align: center;
+    color: #000;
 }
 .calculator span{
     margin-top: 1rem;
@@ -24,4 +26,5 @@
     border: 0;
     padding: 10px 25px;
     margin-top: 1rem;
+    color: #000;
 }

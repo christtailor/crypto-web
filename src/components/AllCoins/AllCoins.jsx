@@ -10,7 +10,7 @@ const AllCoins = () => {
     const Coins = ({image, names, price, volume, capital, high24, rank, low24, percent24}) => {
       
         return (
-          <div class='allCoins'>
+          <div className='allCoins'>
             <a href={"coin/"+names} target="__blank" className='redirect-card'>
             <div className="all-card">
                 <div className="all-cn-rank">
@@ -26,7 +26,7 @@ const AllCoins = () => {
                         <span>$ {price.toLocaleString()}</span>
                       </div>
                     </div>
-      
+{/*       
                     <div className="all-coin-data" >
                      <div className="total-volm all-cn-data" >
                        <small>Total Volume</small>
@@ -48,9 +48,31 @@ const AllCoins = () => {
                        <small>24 Percent Change</small>
                        <small>{percent24.toLocaleString()}</small>
                      </div>
-                    </div>
+                    </div> */}
+                                      <table>
+          <thead>
+<tr>
+<th>Total Volume</th>  
+<th>Market Capital</th>
+  <th>24 Hour High</th>
+  <th>24 Hour Low</th>
+  <th>24 Percent Change</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+  <td>{volume.toLocaleString()}</td>
+  <td>{capital.toLocaleString()}</td>
+    <td>{high24.toLocaleString()}</td>
+    <td>{low24.toLocaleString()}</td>
+    <td>{percent24.toLocaleString()}</td>
+
+  </tr>
+</tbody>
+</table>
                   </div>
             </a>
+            
           </div>
         )
       }
