@@ -6,16 +6,6 @@ import axios from "axios";
 import Coin from "./Coin";
 
 const Crypto = () => {
-
- const userScroll = () => {
-  document.querySelector('.cards').mousewheel(function(event, delta) {
- 
-    this.scrollLeft -= (delta * 30);
-  
-    event.preventDefault();
-
- });
- }
   const [coins, getCryptodata] = useState([]);
 
   useEffect(() => {

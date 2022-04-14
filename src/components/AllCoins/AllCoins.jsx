@@ -39,29 +39,31 @@ const AllCoins = () => {
               <thead>
                 <tr>
                   <th>Total Volume</th>
+                  <th>24hr Percent</th>
                   <th>Market Capital</th>
-                  <th>24 Hour High</th>
-                  <th>24 Hour Low</th>
-                  <th>24 Percent Change</th>
+                  <th>24hr High</th>
+                  <th>24hr Low</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
                   <td>{volume.toLocaleString()}</td>
+                  <td>
+                    {" "}
+                    ATH:{"  "}
+                    {percent24 < 1 ? (
+                      <span className="red_percent">
+                        {percent24.toLocaleString()} &#37;
+                      </span>
+                    ) : (
+                      <span className="green_percent">
+                        {percent24.toLocaleString()} &#37;
+                      </span>
+                    )}
+                  </td>
                   <td>{capital.toLocaleString()}</td>
                   <td>{high24.toLocaleString()}</td>
                   <td>{low24.toLocaleString()}</td>
-                  {/* <td>{percent24.toLocaleString()}</td> */}
-                  <td>            ATH:{"  "}
-            {percent24 < 1 ? (
-              <span className="red_percent">
-                {percent24.toLocaleString()} &#37; 
-              </span>
-            ) : (
-              <span className="green_percent">
-                {percent24.toLocaleString()} &#37; 
-              </span>
-            )}</td>
                 </tr>
               </tbody>
             </table>
