@@ -54,6 +54,12 @@
 }
 
 @media screen and (max-width: 760px) {
+  .card:hover {
+  background: var(--card-color);
+  color: #fff;
+  transform: translate(0px, 0px);
+  box-shadow: none;
+}
   .cards {
     display: flex;
     flex-wrap: nowrap;

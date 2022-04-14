@@ -51,7 +51,17 @@ const AllCoins = () => {
                   <td>{capital.toLocaleString()}</td>
                   <td>{high24.toLocaleString()}</td>
                   <td>{low24.toLocaleString()}</td>
-                  <td>{percent24.toLocaleString()}</td>
+                  {/* <td>{percent24.toLocaleString()}</td> */}
+                  <td>            ATH:{"  "}
+            {percent24 < 1 ? (
+              <span className="red_percent">
+                {percent24.toLocaleString()} &#37; 
+              </span>
+            ) : (
+              <span className="green_percent">
+                {percent24.toLocaleString()} &#37; 
+              </span>
+            )}</td>
                 </tr>
               </tbody>
             </table>
