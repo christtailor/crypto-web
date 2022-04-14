@@ -60,7 +60,7 @@
     gap: 3rem;
     overflow-x: auto;
     margin: 0 1rem;
-    margin-top: 1.5rem;
+    padding-top: 1.5rem;
     justify-content: flex-start;
   }
   ::-webkit-scrollbar {
