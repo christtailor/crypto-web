@@ -53,3 +53,25 @@
 .image img{
     width: 3rem;
 }
+
+
+
+@media screen and (max-width:760px) {
+    
+.cards {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 3rem;
+    overflow-x: auto;
+    margin: 0 1rem;
+    margin-top: 1.5rem;
+    justify-content: flex-start;
+}
+::-webkit-scrollbar{
+    display: none;
+}
+::-webkit-scrollbar-thumb{
+    display: none;
+
+}
+}
