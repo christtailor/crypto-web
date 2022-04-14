@@ -20,32 +20,24 @@ const Data = ({ title, image, url }) => {
 
 const News = () => {
   const [newsData, getNewsData] = useState([]);
-  const options = {
-    method: "GET",
-    url: "https://contextualwebsearch-websearch-v1.p.rapidapi.com/api/search/NewsSearchAPI",
-    params: {
-      q: "crypto news",
-      pageNumber: "1",
-      pageSize: "10",
-      autoCorrect: "true",
-      withThumbnails: "true",
-      fromPublishedDate: "null",
-      toPublishedDate: "null",
-    },
-    headers: {
-      "X-RapidAPI-Host": "contextualwebsearch-websearch-v1.p.rapidapi.com",
-      "X-RapidAPI-Key": "57487d5c22msh9fd476153173200p1731f0jsneba23707f82b",
-    },
-  };
+  const url = 'https://newsapi.org/v2/everything?' +
+  'q=cryptocurrency&' +
+  'from=2022-04-14&' +
+  'sortBy=popularity&' +
+  'apiKey=687711a854d1427a8099082fcabf5a34';
 
   useEffect(() => {
     axios
-      .request(options)
+      .get(
+        url
+      )
       .then((res) => {
-        getNewsData(res.data["value"]);
+        getNewsData(res.data.articles)
+        console.log(res.data.articles)
       })
       .catch((error) => console.log(error));
   }, []);
+  
   return (
     <>
       <div className="news">
@@ -57,8 +49,8 @@ const News = () => {
               <Data
                 key={coin.id}
                 title={coin.title}
-                image={coin.image.thumbnail}
-                url={coin.image.webpageUrl}
+                image={coin.urlToImage}
+                url={coin.url}
               />
             );
           })}
