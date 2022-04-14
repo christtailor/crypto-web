@@ -1,64 +1,60 @@
-.crypto{
-    margin-top: 9rem;
+.crypto {
+  margin-top: 7rem;
 }
-.redirect-card{
-    color: #fff;
-    text-decoration: none;
+.redirect-card {
+  color: #fff;
+  text-decoration: none;
 }
-.card:hover{
-    background: #2170ff;
-    color: #fff;
-    transform: translate(0px, -10px);
-    box-shadow: 0px 0px 18px 1px rgba(255, 255, 255, 0.47);
+.card:hover {
+  background: #2170ff;
+  color: #fff;
+  transform: translate(0px, -10px);
+  box-shadow: 0px 0px 18px 1px rgba(255, 255, 255, 0.47);
 }
-.heading{
-    width: 100%;
-    text-align: center; 
+.heading {
+  width: 100%;
+  text-align: center;
 }
-.cards{
-    display: flex;
-    gap: 3rem;
-    flex-wrap: wrap;
-    margin: 0 3rem;
-    margin-top: 1.5rem;
-    justify-content: center;
+.cards {
+  display: flex;
+  gap: 3rem;
+  flex-wrap: wrap;
+  margin: 0 3rem;
+  margin-top: 1.5rem;
+  justify-content: center;
 }
-.card{
-    background: var(--card-color);
-    display: flex;
-    flex-direction: column;
-    border-radius: 17px;
-    padding: 1rem;
-    transition: all .3s ease;
-    cursor: pointer;
+.card {
+  background: var(--card-color);
+  display: flex;
+  flex-direction: column;
+  border-radius: 17px;
+  padding: 1rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
 }
-.coin-info{
-    display: flex;
-    align-items: center;
-    gap: 1rem;
+.coin-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 .name-price {
-    display: flex;
-    flex-direction: column;
-    padding: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 0;
 }
-.cn-data{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 3rem;
-    color: var(--gray-color);
-
+.cn-data {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
+  color: var(--gray-color);
 }
-.image img{
-    width: 3rem;
+.image img {
+  width: 3rem;
 }
 
-
-
-@media screen and (max-width:760px) {
-    
-.cards {
+@media screen and (max-width: 760px) {
+  .cards {
     display: flex;
     flex-wrap: nowrap;
     gap: 3rem;
@@ -66,12 +62,11 @@
     margin: 0 1rem;
     margin-top: 1.5rem;
     justify-content: flex-start;
-}
-::-webkit-scrollbar{
+  }
+  ::-webkit-scrollbar {
     display: none;
-}
-::-webkit-scrollbar-thumb{
+  }
+  ::-webkit-scrollbar-thumb {
     display: none;
-
-}
+  }
 }

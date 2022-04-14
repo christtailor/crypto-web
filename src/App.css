@@ -1,31 +1,30 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
 
-*{
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
-    text-decoration: none;
-    list-style: none;
-    box-sizing: border-box;
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
 }
-:root{
-    --bg-color: #1C1919;
-    --card-color: #444040;
-    --gray-color: #eeededa3;
-    --blue-color: #2170ff;
+:root {
+  --bg-color: #1c1919;
+  --card-color: #444040;
+  --gray-color: #eeededa3;
+  --blue-color: #2170ff;
 }
-.App{
-
-        background: var(--bg-color);
-        color: #fff;
+.App {
+  background: var(--bg-color);
+  color: #fff;
 }
-.crypto-app{
-    margin: 0 2rem;
-    max-width: 1700px;
-    width: 100%;
+.crypto-app {
+  margin: 0 2rem;
+  max-width: 1700px;
+  width: 100%;
 }
-.App{
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
+.App {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
 }
