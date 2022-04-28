@@ -177,7 +177,7 @@ td {
   animation: loading 1s ease-in-out infinite;
 }
 .loading-bar:nth-child(1) {
-  background-color: #3498db;
+  background-color:  var(--blue-color);
   animation-delay: 0;
 }
 .loading-bar:nth-child(2) {

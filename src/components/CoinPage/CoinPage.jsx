@@ -34,7 +34,7 @@ const CoinPage = () => {
             <span># {coin && coin.market_cap_rank}</span>
           </div>
           <div className="coin-page-image">
-            <img src={coin && coin.image && coin.image.small} />
+            <img src={coin && coin.image && coin.image.small} alt={"Coins"} />
           </div>
           <div className="coin-page-name">
             <span>{coin && coin.name}</span>

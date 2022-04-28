@@ -57,7 +57,7 @@ const News = () => {
     <>
       <div className="news">
         <h1>News</h1>
-         {loading?<LoadingBar />: loading}
+         {/* {loading?<LoadingBar />: loading} */}
 
         <div className="news-data">
           {newsData.map((coin) => {
