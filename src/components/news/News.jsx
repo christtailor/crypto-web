@@ -19,16 +19,16 @@ const Data = ({ title, image, url }) => {
   );
 };
 
-const LoadingBar = () =>{
-  return(
-    <div class="loading">
-    <div class="loading-bar"></div>
-    <div class="loading-bar"></div>
-    <div class="loading-bar"></div>
-    <div class="loading-bar"></div>
-  </div>
-  )
-}
+// const LoadingBar = () =>{
+//   return(
+//     <div class="loading">
+//     <div class="loading-bar"></div>
+//     <div class="loading-bar"></div>
+//     <div class="loading-bar"></div>
+//     <div class="loading-bar"></div>
+//   </div>
+//   )
+// }
 // {loading?<LoadingBar />: loading}
 
 const News = () => {
@@ -46,7 +46,7 @@ const News = () => {
         url
       )
       .then((res) => {
-        setLoading(false)
+        // setLoading(false)
         getNewsData(res.data.articles)
         console.log(res.data.articles)
       })
