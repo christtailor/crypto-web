@@ -6,7 +6,20 @@ import "./allcoins.css";
 const AllCoins = () => {
   const [Allcoins, getCoinData] = useState([]);
   const [search, setSearch] = useState("");
+  const [loading, setLoading] = useState(true);
 
+  const LoadingBar = () =>{
+    return(
+      <div class="loading">
+      <div class="loading-bar"></div>
+      <div class="loading-bar"></div>
+      <div class="loading-bar"></div>
+      <div class="loading-bar"></div>
+    </div>
+    )
+  }
+  // {loading?<LoadingBar />: loading}
+  
   const Coins = ({
     image,
     names,
@@ -80,6 +93,7 @@ const AllCoins = () => {
       )
       .then((res) => {
         getCoinData(res.data);
+        setLoading(false)
         // console.log(res.data)
       })
       .catch((error) => console.log(error));
@@ -97,6 +111,8 @@ const AllCoins = () => {
   return (
     <>
       <div className="cryptos">
+      {loading?<LoadingBar />: loading}
+
         <div className="heading">
           <div className="coin-search">
             <h2>Search A Coin</h2>
