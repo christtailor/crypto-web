@@ -4,6 +4,10 @@ Using React Js to make a real time crypto web application which shows you inform
 
 The web application is fully responsive so you can use it on desktop,tablet and mobile applications.
 
+# FYI
+
+The news section might not appear on the live site because I do not have a Premium subscripion to the site.
+
 
 ## Screenshots
 
