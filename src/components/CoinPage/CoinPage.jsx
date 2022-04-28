@@ -8,6 +8,7 @@ import DOMPurify from "dompurify";
 const CoinPage = () => {
   const params = useParams();
   const [coin, getCoin] = useState({});
+
   let cn_data =
     coin &&
     coin.market_data &&

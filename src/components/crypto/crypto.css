@@ -9,7 +9,7 @@
   background: #2170ff;
   color: #fff;
   transform: translate(0px, -10px);
-  box-shadow: 0px 0px 18px 1px rgba(255, 255, 255, 0.47);
+  box-shadow: 0px 0px 18px 1px rgba(255, 255, 255, 0.15);
 }
 .heading {
   width: 100%;
